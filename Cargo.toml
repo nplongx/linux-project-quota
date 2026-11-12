@@ -1,0 +1,29 @@
+[package]
+name = "linux-project-quota"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "Linux ext4/XFS project quota controller and constrained privileged helper"
+repository = "https://github.com/nplongx/linux-project-quota"
+readme = "README.md"
+keywords = ["linux", "project-quota", "ext4", "xfs", "filesystem"]
+categories = ["filesystem", "os::linux-apis"]
+
+[dependencies]
+chrono = { version = "=0.4.45", features = ["serde", "clock"] }
+libc = "=0.2.189"
+rusqlite = { version = "=0.31.0", features = ["bundled"] }
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = { version = "=1.0.151", features = ["float_roundtrip", "unbounded_depth"] }
+thiserror = "=2.0.20"
+
+[dev-dependencies]
+tempfile = "=3.27.0"
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[[bin]]
+name = "project-quota-helper"
+path = "src/bin/project-quota-helper.rs"
