@@ -37,7 +37,7 @@ Other filesystems and non-Linux targets are unsupported. There is no userspace a
 
 ```toml
 [dependencies]
-linux-project-quota = { git = "https://github.com/nplongx/linux-project-quota" }
+linux-project-quota = { git = "https://github.com/nplongx/linux-project-quota", tag = "v0.1.0" }
 ```
 
 ```rust
