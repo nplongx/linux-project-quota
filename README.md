@@ -7,6 +7,10 @@ A narrow Rust interface for Linux filesystem project quotas on ext4 and XFS. Inc
 
 > **Status:** `0.1.0`, initial standalone extraction. Linux-only. This crate changes kernel-enforced filesystem quota state when mutating methods are called. It is not a generic storage manager, cgroup controller, sandbox, or production security certification.
 
+## Terminology
+
+See [TERMINOLOGY.md](TERMINOLOGY.md) for shared identifier, lifecycle, evidence, time-unit, and compatibility conventions.
+
 ## Capabilities
 
 - Detect an ext4/XFS mount with active `prjquota` or `pquota` options.
